@@ -1,120 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
+<title>ICal Express</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ICal Express - Your Time Is Valuable For Us</title>
 
 <style>
 body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:#f5f7fa;
+margin:0;
+font-family:Arial, sans-serif;
+background:#f4f6f9;
 }
 
 header{
-    background: linear-gradient(90deg,#0b5ed7,#1e90ff);
-    color:white;
-    padding:20px 0;
-    text-align:center;
-}
-
-header h1{
-    margin:0;
-    font-size:32px;
+background:linear-gradient(90deg,#0b5ed7,#1e90ff);
+color:white;
+padding:20px;
+text-align:center;
 }
 
 nav{
-    background:#111;
-    text-align:center;
-    padding:12px;
+background:#111;
+padding:12px;
+text-align:center;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 20px;
-    font-weight:bold;
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
 }
 
 .hero{
-    background:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d') center/cover;
-    color:white;
-    padding:100px 20px;
-    text-align:center;
-}
-
-.hero h2{
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-.hero p{
-    font-size:18px;
-    margin-bottom:20px;
+background:#0b5ed7;
+color:white;
+padding:60px 20px;
+text-align:center;
 }
 
 .btn{
-    display:inline-block;
-    padding:12px 25px;
-    background:#dc3545;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    margin:10px;
-    font-weight:bold;
+background:#dc3545;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+text-decoration:none;
+display:inline-block;
+margin-top:10px;
 }
 
 .section{
-    padding:60px 20px;
-    text-align:center;
-}
-
-.section h2{
-    margin-bottom:40px;
-    font-size:28px;
+padding:50px 20px;
+text-align:center;
 }
 
 .services{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:25px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
 }
 
 .card{
-    background:white;
-    width:260px;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    transition:0.3s;
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
-.card:hover{
-    transform:translateY(-8px);
+input, textarea{
+width:90%;
+padding:10px;
+margin:8px 0;
+border-radius:5px;
+border:1px solid #ccc;
 }
 
 footer{
-    background:#111;
-    color:white;
-    padding:20px;
-    text-align:center;
+background:#111;
+color:white;
+text-align:center;
+padding:15px;
 }
 
 .whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px 20px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
 }
 </style>
+
+<script>
+function sendToWhatsApp(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let weight=document.getElementById("weight").value;
+let address=document.getElementById("address").value;
+
+let message = "New Pickup Request:%0A"
++ "Name: " + name + "%0A"
++ "Phone: " + phone + "%0A"
++ "Weight: " + weight + "%0A"
++ "Address: " + address;
+
+window.open("https://wa.me/917048983268?text="+message);
+}
+
+function trackParcel(){
+let tracking=document.getElementById("tracking").value;
+alert("Tracking Number: " + tracking + "\nStatus: In Transit (Demo Mode)");
+}
+</script>
+
 </head>
 
 <body>
@@ -126,44 +131,64 @@ footer{
 
 <nav>
 <a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Contact</a>
+<a href="#services">Services</a>
+<a href="#booking">Book Pickup</a>
+<a href="#tracking-section">Tracking</a>
 </nav>
 
 <section class="hero">
 <h2>Fast & Reliable Courier Service</h2>
 <p>Shree Maruti • Delhivery • My Ace</p>
-<a class="btn" href="https://wa.me/917048983268" target="_blank">
-Book Pickup
-</a>
+<a class="btn" href="#booking">Book Now</a>
 </section>
 
-<section class="section">
+<section class="section" id="services">
 <h2>Our Services</h2>
 
 <div class="services">
 
 <div class="card">
 <h3>Express Delivery</h3>
-<p>24-48 hour fast shipping across India.</p>
+<p>24-48 hour fast shipping.</p>
 </div>
 
 <div class="card">
 <h3>Air Cargo</h3>
-<p>Urgent shipments delivered by air network.</p>
+<p>Urgent shipments via air.</p>
 </div>
 
 <div class="card">
 <h3>Surface Cargo</h3>
-<p>Affordable & secure ground delivery.</p>
+<p>Affordable all India delivery.</p>
 </div>
 
 <div class="card">
 <h3>Bulk Shipment</h3>
-<p>Special pricing for heavy parcels & businesses.</p>
+<p>Special rates for heavy parcels.</p>
 </div>
 
 </div>
+</section>
+
+<section class="section" id="booking">
+<h2>Book Pickup</h2>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="phone" placeholder="Phone Number">
+<input type="text" id="weight" placeholder="Parcel Weight">
+<textarea id="address" placeholder="Pickup Address"></textarea>
+<br>
+<button class="btn" onclick="sendToWhatsApp()">Send on WhatsApp</button>
+
+</section>
+
+<section class="section" id="tracking-section">
+<h2>Track Shipment</h2>
+
+<input type="text" id="tracking" placeholder="Enter Tracking Number">
+<br>
+<button class="btn" onclick="trackParcel()">Track</button>
+
 </section>
 
 <footer>
