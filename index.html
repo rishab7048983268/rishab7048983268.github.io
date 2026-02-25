@@ -1,91 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ICal Express</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            text-align: center;
-        }
-        header {
-            background: #0b5ed7;
-            color: white;
-            padding: 20px;
-        }
-        h1 {
-            margin: 0;
-        }
-        .section {
-            padding: 40px 20px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 20px;
-            margin: 10px;
-            background: #dc3545;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        footer {
-            background: #222;
-            color: white;
-            padding: 15px;
-            margin-top: 20px;
-        }
-        .card {
-            background: white;
-            margin: 15px auto;
-            padding: 20px;
-            max-width: 300px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICal Express - Your Time Is Valuable For Us</title>
+
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#f5f7fa;
+}
+
+header{
+    background: linear-gradient(90deg,#0b5ed7,#1e90ff);
+    color:white;
+    padding:20px 0;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+nav{
+    background:#111;
+    text-align:center;
+    padding:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-weight:bold;
+}
+
+.hero{
+    background:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d') center/cover;
+    color:white;
+    padding:100px 20px;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#dc3545;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    margin:10px;
+    font-weight:bold;
+}
+
+.section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.section h2{
+    margin-bottom:40px;
+    font-size:28px;
+}
+
+.services{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.card{
+    background:white;
+    width:260px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+footer{
+    background:#111;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>ICal Express</h1>
-    <p>Your Time Is Valuable For Us</p>
+<h1>ICal Express</h1>
+<p>Your Time Is Valuable For Us</p>
 </header>
 
-<div class="section">
-    <h2>Fast & Reliable Courier Service</h2>
-    <a class="btn" href="https://wa.me/917048983268" target="_blank">Book on WhatsApp</a>
+<nav>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
+</nav>
+
+<section class="hero">
+<h2>Fast & Reliable Courier Service</h2>
+<p>Shree Maruti • Delhivery • My Ace</p>
+<a class="btn" href="https://wa.me/917048983268" target="_blank">
+Book Pickup
+</a>
+</section>
+
+<section class="section">
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Express Delivery</h3>
+<p>24-48 hour fast shipping across India.</p>
 </div>
 
-<div class="section">
-    <h2>Our Services</h2>
-
-    <div class="card">
-        <h3>Express Delivery</h3>
-        <p>Fast delivery across India</p>
-    </div>
-
-    <div class="card">
-        <h3>Air Cargo</h3>
-        <p>Urgent shipments by air</p>
-    </div>
-
-    <div class="card">
-        <h3>Surface Cargo</h3>
-        <p>Affordable all India shipping</p>
-    </div>
-
-    <div class="card">
-        <h3>Bulk Shipment</h3>
-        <p>Special rates for heavy parcels</p>
-    </div>
+<div class="card">
+<h3>Air Cargo</h3>
+<p>Urgent shipments delivered by air network.</p>
 </div>
+
+<div class="card">
+<h3>Surface Cargo</h3>
+<p>Affordable & secure ground delivery.</p>
+</div>
+
+<div class="card">
+<h3>Bulk Shipment</h3>
+<p>Special pricing for heavy parcels & businesses.</p>
+</div>
+
+</div>
+</section>
 
 <footer>
-    <p>© 2026 ICal Express | All Rights Reserved</p>
+<p>© 2026 ICal Express | All Rights Reserved</p>
 </footer>
+
+<a class="whatsapp" href="https://wa.me/917048983268" target="_blank">
+WhatsApp Us
+</a>
 
 </body>
 </html>
