@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ICal Express</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #0b5ed7;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .section {
+            padding: 40px 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px;
+            background: #dc3545;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            background: #222;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .card {
+            background: white;
+            margin: 15px auto;
+            padding: 20px;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ICal Express</h1>
+    <p>Your Time Is Valuable For Us</p>
+</header>
+
+<div class="section">
+    <h2>Fast & Reliable Courier Service</h2>
+    <a class="btn" href="https://wa.me/917048983268" target="_blank">Book on WhatsApp</a>
+</div>
+
+<div class="section">
+    <h2>Our Services</h2>
+
+    <div class="card">
+        <h3>Express Delivery</h3>
+        <p>Fast delivery across India</p>
+    </div>
+
+    <div class="card">
+        <h3>Air Cargo</h3>
+        <p>Urgent shipments by air</p>
+    </div>
+
+    <div class="card">
+        <h3>Surface Cargo</h3>
+        <p>Affordable all India shipping</p>
+    </div>
+
+    <div class="card">
+        <h3>Bulk Shipment</h3>
+        <p>Special rates for heavy parcels</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 ICal Express | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
